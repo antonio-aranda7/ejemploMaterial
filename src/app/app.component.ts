@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, /*CAP12*/ ViewChild} from '@angular/core';
+/*CAP12*/
+import { SelectornumericoComponent} from './selectornumerico/selectornumerico.component'
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ejemploMaterial';
+  /*CAP12*/
+  @ViewChild('selector1') selector1: SelectornumericoComponent;
+  @ViewChild('selector2') selector2: SelectornumericoComponent;  
+
+  fijarSelector1(valor:number) {
+    this.selector1.fijar(valor);
+  }
+
+  fijarSelector2(valor:number) {
+    this.selector2.fijar(valor);
+  }
   //CAP11 NADA solo HTML
   //CAP10
   mensaje='';
