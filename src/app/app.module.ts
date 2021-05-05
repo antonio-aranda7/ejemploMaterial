@@ -10,13 +10,15 @@ import { MatIconModule } from '@angular/material/icon';
 import { InfoBanderaComponent } from './info-bandera/info-bandera.component';
 import { DadoComponent } from './dado/dado.component';
 import { CronometroComponent } from './cronometro/cronometro.component';
+import { SelectornumericoComponent } from './selectornumerico/selectornumerico.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoBanderaComponent,
     DadoComponent,
-    CronometroComponent
+    CronometroComponent,
+    SelectornumericoComponent
   ],
   imports: [
     BrowserModule,

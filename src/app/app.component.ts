@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ejemploMaterial';
+  //CAP11 NADA solo HTML
   //CAP10
   mensaje='';
 
