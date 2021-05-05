@@ -9,12 +9,14 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { InfoBanderaComponent } from './info-bandera/info-bandera.component';
 import { DadoComponent } from './dado/dado.component';
+import { CronometroComponent } from './cronometro/cronometro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InfoBanderaComponent,
-    DadoComponent
+    DadoComponent,
+    CronometroComponent
   ],
   imports: [
     BrowserModule,

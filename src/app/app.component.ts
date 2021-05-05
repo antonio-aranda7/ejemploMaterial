@@ -7,7 +7,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ejemploMaterial';
+  //CAP10
+  mensaje='';
 
+  actualizar(t) {
+    this.mensaje = t + '(se actualiza cada 10 segundos)';
+  }
+//cap 9
   valor1: number;
   valor2: number;
   valor3: number;
