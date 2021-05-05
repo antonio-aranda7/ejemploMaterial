@@ -11,6 +11,7 @@ import { InfoBanderaComponent } from './info-bandera/info-bandera.component';
 import { DadoComponent } from './dado/dado.component';
 import { CronometroComponent } from './cronometro/cronometro.component';
 import { SelectornumericoComponent } from './selectornumerico/selectornumerico.component';
+import { ListadoarticulosComponent } from './listadoarticulos/listadoarticulos.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SelectornumericoComponent } from './selectornumerico/selectornumerico.c
     InfoBanderaComponent,
     DadoComponent,
     CronometroComponent,
-    SelectornumericoComponent
+    SelectornumericoComponent,
+    ListadoarticulosComponent
   ],
   imports: [
     BrowserModule,
