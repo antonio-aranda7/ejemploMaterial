@@ -11,6 +11,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AppComponent {
   title = 'ejemploMaterial';
+  /*Consumir un servicio Web que devuelva datos en formato JSon*/
+  banderas = null;
   /*CAP15*/
   articulos2 = null;
   /*CAP13*/
@@ -64,12 +66,24 @@ export class AppComponent {
       this.resultado='Perdió';
   }
 
-  /*CAP15*/
+  /*CAP15
   ngOnInit() {
     this.http.get("http://scratchya.com.ar/vue/datos.php")
       .subscribe(
         result => {
           this.articulos2 = result;
+        },
+        error => {
+          console.log('problemas');
+        }
+      );
+  }*/
+  /*Consumir un servicio Web que devuelva datos en formato JSon*/
+  ngOnInit() {
+    this.http.get("https://restcountries.eu/rest/v2/all")
+      .subscribe(
+        result => {
+          this.banderas = result;
         },
         error => {
           console.log('problemas');
