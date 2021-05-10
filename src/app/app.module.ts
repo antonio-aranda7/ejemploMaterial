@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
 
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
@@ -12,6 +14,8 @@ import { DadoComponent } from './dado/dado.component';
 import { CronometroComponent } from './cronometro/cronometro.component';
 import { SelectornumericoComponent } from './selectornumerico/selectornumerico.component';
 import { ListadoarticulosComponent } from './listadoarticulos/listadoarticulos.component';
+//CAP14
+import { ElementosModule } from './elementos/elementos.module'
 
 @NgModule({
   declarations: [
@@ -29,7 +33,9 @@ import { ListadoarticulosComponent } from './listadoarticulos/listadoarticulos.c
     MatToolbarModule,
     MatIconModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    //CAP14
+    ElementosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
