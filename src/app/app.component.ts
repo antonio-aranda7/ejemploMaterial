@@ -1,6 +1,8 @@
 import { Component, /*CAP12*/ ViewChild} from '@angular/core';
 /*CAP12*/
 import { SelectornumericoComponent} from './selectornumerico/selectornumerico.component'
+/*CAP15*/
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +11,8 @@ import { SelectornumericoComponent} from './selectornumerico/selectornumerico.co
 })
 export class AppComponent {
   title = 'ejemploMaterial';
+  /*CAP15*/
+  articulos2 = null;
   /*CAP13*/
   articulos = [{codigo:1, descripcion:'papas', precio:10.55},
                {codigo:2, descripcion:'manzanas', precio:12.10},
@@ -39,7 +43,8 @@ export class AppComponent {
   valor2: number;
   valor3: number;
   resultado: string;
-  constructor() {
+
+  constructor(/*CAP15*/private http: HttpClient) {
     this.valor1 = this.retornarAleatorio();
     this.valor2 = this.retornarAleatorio();
     this.valor3 = this.retornarAleatorio();
@@ -57,5 +62,18 @@ export class AppComponent {
       this.resultado='Ganó';
     else
       this.resultado='Perdió';
+  }
+
+  /*CAP15*/
+  ngOnInit() {
+    this.http.get("http://scratchya.com.ar/vue/datos.php")
+      .subscribe(
+        result => {
+          this.articulos2 = result;
+        },
+        error => {
+          console.log('problemas');
+        }
+      );
   }
 }

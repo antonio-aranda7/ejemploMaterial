@@ -1,4 +1,19 @@
 <!--CAP15-->
+<div *ngIf="articulos2!=null; else espera">
+  <!--la directiva *ngIf verificamos si la variable articulos tiene un null procedemos a mostrar el contenido de la etiqueta 'ng-template':-->
+  <table border="1">
+    <tr>
+      <td>Codigo</td><td>Descripcion</td><td>Precio</td>
+    </tr>
+    <tr *ngFor="let art of articulos2">
+      <td>{{art.codigo}}</td>
+      <td>{{art.descripcion}}</td>
+      <td>{{art.precio}}</td>
+    </tr>
+  </table>
+  <!-- Para mostrar los datos de la propiedad 'articulos' lo hacemos como lo hemos visto anteriormente: -->
+</div>
+<ng-template #espera>Esperando datos...</ng-template>
 <!--CAP14-->
 <div style="text-align:center">
   <app-dado2 valor="21"></app-dado2>

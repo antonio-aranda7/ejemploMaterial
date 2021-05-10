@@ -16,6 +16,8 @@ import { SelectornumericoComponent } from './selectornumerico/selectornumerico.c
 import { ListadoarticulosComponent } from './listadoarticulos/listadoarticulos.component';
 //CAP14
 import { ElementosModule } from './elementos/elementos.module'
+//CAP15
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { ElementosModule } from './elementos/elementos.module'
     MatCardModule,
     MatIconModule,
     //CAP14
-    ElementosModule
+    ElementosModule,
+    //CAP14
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
