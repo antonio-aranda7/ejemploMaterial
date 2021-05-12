@@ -65,25 +65,23 @@ export class AppComponent {
     else
       this.resultado='Perdió';
   }
-
-  /*CAP15
+  
   ngOnInit() {
-    this.http.get("http://scratchya.com.ar/vue/datos.php")
+    /*Consumir un servicio Web que devuelva datos en formato JSon*/
+    this.http.get("https://restcountries.eu/rest/v2/all")
       .subscribe(
         result => {
-          this.articulos2 = result;
+          this.banderas = result;
         },
         error => {
           console.log('problemas');
         }
       );
-  }*/
-  /*Consumir un servicio Web que devuelva datos en formato JSon*/
-  ngOnInit() {
-    this.http.get("https://restcountries.eu/rest/v2/all")
+      //CAP15
+      this.http.get("http://scratchya.com.ar/vue/datos.php")
       .subscribe(
         result => {
-          this.banderas = result;
+          this.articulos2 = result;
         },
         error => {
           console.log('problemas');
