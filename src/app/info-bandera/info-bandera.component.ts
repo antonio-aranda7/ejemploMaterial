@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class InfoBanderaComponent implements OnInit {
   nombrePais ="México";
   imgBandera ="./mx.svg";
+  capital ="";
   constructor() { }
 
   ngOnInit(): void {
